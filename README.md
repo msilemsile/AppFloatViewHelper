@@ -13,3 +13,6 @@ AppFloatViewHelper floatHelper = new AppFloatViewHelper(applicaton);
 View contentView = new ...(application);
 
 floatHelper.setContentView(contentView);
+
+
+![Image](https://github.com/msilemsile/AppFloatViewHelper/blob/master/demo.gif)
