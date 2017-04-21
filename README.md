@@ -10,6 +10,6 @@ API level >= 19的时候, 使用TYPE_TOAST, 其他情况使用TYPE_PHONE(需要�
 
 AppFloatViewHelper floatHelper = new AppFloatViewHelper(applicaton);
 
-View contentView=new ...(application);
+View contentView = new ...(application);
 
 floatHelper.setContentView(contentView);
