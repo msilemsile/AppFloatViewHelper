@@ -8,7 +8,7 @@ import android.view.ViewConfiguration;
 import android.view.WindowManager;
 
 /**
- * 应用浮动窗体(使用type_toast 避开悬浮窗权限)
+ * 应用浮动窗体(高版本使用type_toast 避开悬浮窗权限)
  */
 
 public class AppFloatViewHelper implements View.OnTouchListener {
