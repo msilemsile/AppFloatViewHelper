@@ -43,14 +43,12 @@ public class AppFloatViewHelper implements View.OnTouchListener {
         mWindowLayoutParams.format = PixelFormat.TRANSLUCENT;
         mWindowLayoutParams.gravity = Gravity.LEFT | Gravity.TOP;
         int windowType;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            if (Build.VERSION.SDK_INT > 24) {
-                windowType = WindowManager.LayoutParams.TYPE_PHONE;
-            } else {
-                windowType = WindowManager.LayoutParams.TYPE_TOAST;
-            }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            //Android 8.0
+            mWindowLayoutParams.type = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
         } else {
-            windowType = WindowManager.LayoutParams.TYPE_PHONE;
+            //其他版本
+            mWindowLayoutParams.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
         }
         mWindowLayoutParams.type = windowType;
         mWindowLayoutParams.flags = WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL
